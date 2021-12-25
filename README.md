@@ -1,4 +1,4 @@
-# Windrose Cubeworlds
+# WindRose CubeWorlds
 
 This is the WindRose CubeWorlds project. It allows cubes be assembled from "face" (external 6-side dice face) maps and some amounts of "basement" (internal front-aligned in cone-like layout) maps.
 
