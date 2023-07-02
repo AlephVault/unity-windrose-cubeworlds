@@ -1,10 +1,10 @@
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Objects;
-using GameMeanMachine.Unity.WindRose.CubeWorlds.Authoring.Behaviours.Entities;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.Entities.Objects;
+using AlephVault.Unity.WindRose.CubeWorlds.Authoring.Behaviours.Entities;
+using AlephVault.Unity.WindRose.Types;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.CubeWorlds
+namespace AlephVault.Unity.WindRose.CubeWorlds
 {
     namespace Samples
     {

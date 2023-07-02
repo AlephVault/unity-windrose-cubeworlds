@@ -81782,12 +81782,12 @@ GameObject:
   - component: {fileID: 347741765}
   - component: {fileID: 347741764}
   - component: {fileID: 347741763}
-  - component: {fileID: 347741762}
-  - component: {fileID: 347741761}
   - component: {fileID: 347741770}
   - component: {fileID: 347741769}
   - component: {fileID: 347741768}
   - component: {fileID: 347741767}
+  - component: {fileID: 347741762}
+  - component: {fileID: 347741761}
   m_Layer: 0
   m_Name: TeleportUpToFront
   m_TagString: Untagged
@@ -81819,11 +81819,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 347741759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3087547ba1977428e6b3cb1288ce86, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a4c8067620401bb63343d8ec29fc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceOrientation: 1
-  NewOrientation: 0
+  Target: cube-to-lvl1
 --- !u!114 &347741762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81833,10 +81832,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 347741759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d571d9565ea009a4da680114b10ba4f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a60b9917dab43f487a5e47f58ba4aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1043059762}
+  teleportKey: lvl1-to-cube
+  ForceOrientation: 1
+  NewOrientation: 0
 --- !u!114 &347741763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81877,6 +81878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  zHeight: 0
   speed: 4
   orientation: 0
   mainVisual: {fileID: 0}
@@ -81993,6 +81995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  priority: 0
+  RelatedObjectOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &353416684
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -82220,12 +82224,12 @@ GameObject:
   - component: {fileID: 404210916}
   - component: {fileID: 404210915}
   - component: {fileID: 404210914}
-  - component: {fileID: 404210913}
-  - component: {fileID: 404210908}
   - component: {fileID: 404210912}
   - component: {fileID: 404210911}
   - component: {fileID: 404210910}
   - component: {fileID: 404210909}
+  - component: {fileID: 404210913}
+  - component: {fileID: 404210908}
   m_Layer: 0
   m_Name: TeleportDownToLvl2
   m_TagString: Untagged
@@ -82242,11 +82246,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 404210907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3087547ba1977428e6b3cb1288ce86, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a4c8067620401bb63343d8ec29fc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceOrientation: 1
-  NewOrientation: 0
+  Target: lvl2-to-lvl1
 --- !u!114 &404210909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82311,10 +82314,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 404210907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d571d9565ea009a4da680114b10ba4f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a60b9917dab43f487a5e47f58ba4aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 2110611862}
+  teleportKey: lvl1-to-lvl2
+  ForceOrientation: 1
+  NewOrientation: 0
 --- !u!114 &404210914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82355,6 +82360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  zHeight: 0
   speed: 4
   orientation: 0
   mainVisual: {fileID: 0}
@@ -84060,6 +84066,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  priority: 0
+  RelatedObjectOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &524194754
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -84176,6 +84184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 526337078}
   Bypass: 0
 --- !u!114 &526337078
@@ -84215,6 +84224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &526337081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85232,6 +85242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 705579490}
   Bypass: 0
 --- !u!114 &705579490
@@ -85271,6 +85282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &705579493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85502,6 +85514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  zHeight: 0
   speed: 4
   orientation: 0
   mainVisual: {fileID: 1743233574}
@@ -85611,6 +85624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 849093406}
   Bypass: 0
 --- !u!114 &849093406
@@ -85650,6 +85664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &849093409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85842,6 +85857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  priority: 0
+  RelatedObjectOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &867692193
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -86156,6 +86173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 1004976791}
   Bypass: 0
 --- !u!114 &1004976791
@@ -86195,6 +86213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &1004976794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88328,12 +88347,12 @@ GameObject:
   - component: {fileID: 1043059766}
   - component: {fileID: 1043059765}
   - component: {fileID: 1043059764}
-  - component: {fileID: 1043059763}
-  - component: {fileID: 1043059762}
   - component: {fileID: 1043059771}
   - component: {fileID: 1043059770}
   - component: {fileID: 1043059769}
   - component: {fileID: 1043059768}
+  - component: {fileID: 1043059763}
+  - component: {fileID: 1043059762}
   m_Layer: 0
   m_Name: TeleportDownToLvl1
   m_TagString: Untagged
@@ -88365,11 +88384,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1043059760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3087547ba1977428e6b3cb1288ce86, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a4c8067620401bb63343d8ec29fc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceOrientation: 1
-  NewOrientation: 0
+  Target: lvl1-to-cube
 --- !u!114 &1043059763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88379,10 +88397,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1043059760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d571d9565ea009a4da680114b10ba4f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a60b9917dab43f487a5e47f58ba4aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 347741761}
+  teleportKey: cube-to-lvl1
+  ForceOrientation: 1
+  NewOrientation: 0
 --- !u!114 &1043059764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88423,6 +88443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  zHeight: 0
   speed: 4
   orientation: 0
   mainVisual: {fileID: 0}
@@ -90168,6 +90189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  priority: 0
+  RelatedObjectOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &1089292601
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90278,6 +90301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  priority: 0
+  RelatedObjectOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &1176899761
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -90527,6 +90552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 1229357327}
   Bypass: 0
 --- !u!114 &1229357327
@@ -90566,6 +90592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &1229357330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90695,6 +90722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 1270609487}
   Bypass: 0
 --- !u!114 &1270609487
@@ -90734,6 +90762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &1270609490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90833,6 +90862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 1285159524}
   Bypass: 0
 --- !u!114 &1285159524
@@ -90872,6 +90902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &1285159527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91046,12 +91077,12 @@ GameObject:
   - component: {fileID: 1351435988}
   - component: {fileID: 1351435987}
   - component: {fileID: 1351435986}
-  - component: {fileID: 1351435985}
-  - component: {fileID: 1351435984}
   - component: {fileID: 1351435983}
   - component: {fileID: 1351435982}
   - component: {fileID: 1351435981}
   - component: {fileID: 1351435980}
+  - component: {fileID: 1351435985}
+  - component: {fileID: 1351435984}
   m_Layer: 0
   m_Name: TeleportToFlatWorld
   m_TagString: Untagged
@@ -91138,11 +91169,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1351435978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3087547ba1977428e6b3cb1288ce86, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a4c8067620401bb63343d8ec29fc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceOrientation: 1
-  NewOrientation: 0
+  Target: flat-to-cube
 --- !u!114 &1351435985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91152,10 +91182,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1351435978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d571d9565ea009a4da680114b10ba4f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a60b9917dab43f487a5e47f58ba4aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1656311619}
+  teleportKey: cube-to-flat
+  ForceOrientation: 1
+  NewOrientation: 0
 --- !u!114 &1351435986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91196,6 +91228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  zHeight: 0
   speed: 4
   orientation: 0
   mainVisual: {fileID: 0}
@@ -96262,6 +96295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 1505154737}
   Bypass: 0
 --- !u!114 &1505154737
@@ -96301,6 +96335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &1505154740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96425,6 +96460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  priority: 0
+  RelatedObjectOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &1551920848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -96570,12 +96607,12 @@ GameObject:
   - component: {fileID: 1656311623}
   - component: {fileID: 1656311622}
   - component: {fileID: 1656311621}
-  - component: {fileID: 1656311620}
-  - component: {fileID: 1656311619}
   - component: {fileID: 1656311618}
   - component: {fileID: 1656311617}
   - component: {fileID: 1656311616}
   - component: {fileID: 1656311615}
+  - component: {fileID: 1656311620}
+  - component: {fileID: 1656311619}
   m_Layer: 0
   m_Name: TeleportToPlanet
   m_TagString: Untagged
@@ -96662,11 +96699,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656311613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3087547ba1977428e6b3cb1288ce86, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a4c8067620401bb63343d8ec29fc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceOrientation: 1
-  NewOrientation: 0
+  Target: cube-to-flat
 --- !u!114 &1656311620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96676,10 +96712,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1656311613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d571d9565ea009a4da680114b10ba4f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a60b9917dab43f487a5e47f58ba4aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 1351435984}
+  teleportKey: flat-to-cube
+  ForceOrientation: 1
+  NewOrientation: 0
 --- !u!114 &1656311621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96720,6 +96758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  zHeight: 0
   speed: 4
   orientation: 0
   mainVisual: {fileID: 0}
@@ -96787,6 +96826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cce6a64d4586149b9f36eece7cfcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesSpatialIndexing: 0
   strategy: {fileID: 1705299783}
   Bypass: 0
 --- !u!114 &1705299783
@@ -96826,6 +96866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fdca068a04fdf40a7959b8171730b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockMode: 0
 --- !u!114 &1705299786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97062,7 +97103,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: {fileID: 11400000, guid: ee739563520545145a69bdce7b72788c, type: 2}
-  fallback: 
 --- !u!114 &1743233571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97116,6 +97156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 16384
+  priority: 0
+  RelatedObjectOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &1743233575
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -97653,12 +97695,12 @@ GameObject:
   - component: {fileID: 2110611866}
   - component: {fileID: 2110611865}
   - component: {fileID: 2110611864}
-  - component: {fileID: 2110611863}
-  - component: {fileID: 2110611862}
   - component: {fileID: 2110611871}
   - component: {fileID: 2110611870}
   - component: {fileID: 2110611869}
   - component: {fileID: 2110611868}
+  - component: {fileID: 2110611863}
+  - component: {fileID: 2110611862}
   m_Layer: 0
   m_Name: TeleportUpToLVl1
   m_TagString: Untagged
@@ -97690,11 +97732,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2110611860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3087547ba1977428e6b3cb1288ce86, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a4c8067620401bb63343d8ec29fc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ForceOrientation: 1
-  NewOrientation: 0
+  Target: lvl1-to-lvl2
 --- !u!114 &2110611863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97704,10 +97745,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2110611860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d571d9565ea009a4da680114b10ba4f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a60b9917dab43f487a5e47f58ba4aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Target: {fileID: 404210908}
+  teleportKey: lvl2-to-lvl1
+  ForceOrientation: 1
+  NewOrientation: 0
 --- !u!114 &2110611864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97748,6 +97791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 1
   height: 1
+  zHeight: 0
   speed: 4
   orientation: 0
   mainVisual: {fileID: 0}

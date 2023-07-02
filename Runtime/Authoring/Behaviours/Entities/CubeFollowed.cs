@@ -1,14 +1,14 @@
 using System.Collections;
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.Entities.Objects;
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.World;
-using GameMeanMachine.Unity.WindRose.CubeWorlds.Authoring.Behaviours.Watch;
-using GameMeanMachine.Unity.WindRose.CubeWorlds.Authoring.Behaviours.World;
-using GameMeanMachine.Unity.WindRose.CubeWorlds.Types;
-using GameMeanMachine.Unity.WindRose.NeighbourTeleports.Authoring.Behaviours.Entities.Objects.Strategies;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.Entities.Objects;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.World;
+using AlephVault.Unity.WindRose.CubeWorlds.Authoring.Behaviours.Watch;
+using AlephVault.Unity.WindRose.CubeWorlds.Authoring.Behaviours.World;
+using AlephVault.Unity.WindRose.CubeWorlds.Types;
+using AlephVault.Unity.WindRose.NeighbourTeleports.Authoring.Behaviours.Entities.Objects.Strategies;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.CubeWorlds
+namespace AlephVault.Unity.WindRose.CubeWorlds
 {
     namespace Authoring
     {

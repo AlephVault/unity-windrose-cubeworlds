@@ -1,4 +1,4 @@
-namespace GameMeanMachine.Unity.WindRose.CubeWorlds
+namespace AlephVault.Unity.WindRose.CubeWorlds
 {
     namespace Types
     {

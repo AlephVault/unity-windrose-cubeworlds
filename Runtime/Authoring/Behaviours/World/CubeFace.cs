@@ -1,9 +1,9 @@
-using GameMeanMachine.Unity.WindRose.NeighbourTeleports.Authoring.Behaviours.World.Layers.Objects.ObjectsManagementStrategies;
-using GameMeanMachine.Unity.WindRose.CubeWorlds.Types;
+using AlephVault.Unity.WindRose.NeighbourTeleports.Authoring.Behaviours.World.Layers.Objects.ObjectsManagementStrategies;
+using AlephVault.Unity.WindRose.CubeWorlds.Types;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.CubeWorlds
+namespace AlephVault.Unity.WindRose.CubeWorlds
 {
     namespace Authoring
     {

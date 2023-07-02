@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using AlephVault.Unity.Support.Utils;
-using GameMeanMachine.Unity.WindRose.Authoring.Behaviours.World;
-using GameMeanMachine.Unity.WindRose.CubeWorlds.Authoring.Behaviours.Entities;
-using GameMeanMachine.Unity.WindRose.CubeWorlds.Types;
-using GameMeanMachine.Unity.WindRose.NeighbourTeleports.Authoring.Behaviours.World.Layers.Objects.ObjectsManagementStrategies;
-using GameMeanMachine.Unity.WindRose.Types;
+using AlephVault.Unity.WindRose.Authoring.Behaviours.World;
+using AlephVault.Unity.WindRose.CubeWorlds.Authoring.Behaviours.Entities;
+using AlephVault.Unity.WindRose.CubeWorlds.Types;
+using AlephVault.Unity.WindRose.NeighbourTeleports.Authoring.Behaviours.World.Layers.Objects.ObjectsManagementStrategies;
+using AlephVault.Unity.WindRose.Types;
 using UnityEditor;
 using UnityEngine;
 
 
-namespace GameMeanMachine.Unity.WindRose.CubeWorlds
+namespace AlephVault.Unity.WindRose.CubeWorlds
 {
     namespace Authoring
     {
